@@ -25,7 +25,7 @@
       Hi! Im Josh, a backend systems engineer, student, on a journey of
       exploring the underworld of programming languages.<br /><br />
       My current passion project is learning
-      <a src="https://nim-lang.org/" class="url">Nim 👑</a>, but I am also
+      <a href="https://nim-lang.org/" class="url">Nim 👑</a>, but I am also
       interested in other technologies like Go and Rust 🦀
     </p>
   </div>

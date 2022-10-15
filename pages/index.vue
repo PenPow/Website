@@ -13,7 +13,7 @@
     <div class="max-w-3xl px-8 mt-24 mx-auto">
       <div>
         <img
-          src="~/assets/img/avatar.png"
+          src="http://cdn.penpow.dev/gZHq.png"
           alt="Its Me!"
           class="w-32 h-32 rounded-3xl inline avatar"
         />
