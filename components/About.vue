@@ -7,7 +7,7 @@
         <div class="text-lg">&nbsp;</div>
         <div class="text-xl ml-3">
           <a
-            href="https://twitter.com/PenPow"
+            href="https://twitter.com/KaPowPen"
             target="_blank"
             class="hover:opacity-80 transition"
             ><font-awesome-icon :icon="['fab', 'twitter']"
