@@ -18,6 +18,12 @@
             class="hover:opacity-80 transition"
             ><font-awesome-icon :icon="['fab', 'github']"
           /></a>
+          <a
+            href="https://discordlookup.com/user/207198455301537793"
+            target="_blank"
+            class="hover:opacity-80 transition"
+            ><font-awesome-icon :icon="['fab', 'discord']"
+          /></a>
         </div>
       </div>
     </h1>
