@@ -7,7 +7,7 @@
         <div class="text-lg">&nbsp;</div>
         <div class="text-xl ml-3">
           <a
-            href="https://twitter.com/PenPow"
+            href="https://twitter.com/KaPowPen"
             target="_blank"
             class="hover:opacity-80 transition"
             ><font-awesome-icon :icon="['fab', 'twitter']"
@@ -18,6 +18,12 @@
             class="hover:opacity-80 transition"
             ><font-awesome-icon :icon="['fab', 'github']"
           /></a>
+          <a
+            href="https://discordlookup.com/user/207198455301537793"
+            target="_blank"
+            class="hover:opacity-80 transition"
+            ><font-awesome-icon :icon="['fab', 'discord']"
+          /></a>
         </div>
       </div>
     </h1>
@@ -25,7 +31,7 @@
       Hi! Im Josh, a backend systems engineer, student, on a journey of
       exploring the underworld of programming languages.<br /><br />
       My current passion project is learning
-      <a src="https://nim-lang.org/" class="url">Nim 👑</a>, but I am also
+      <a href="https://nim-lang.org/" class="url">Nim 👑</a>, but I am also
       interested in other technologies like Go and Rust 🦀
     </p>
   </div>

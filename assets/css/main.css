@@ -64,3 +64,23 @@ code .line::before {
   text-align: right;
   color: rgba(115,138,148,.4)
 } */
+
+code:before {
+  content: none;
+  display: none;
+}
+
+code:after {
+  content: none;
+  display: none;
+}
+
+code::before {
+  content: none;
+  display: none;
+}
+
+code::after {
+  content: none;
+  display: none;
+}
