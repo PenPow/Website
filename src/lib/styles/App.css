@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100;200;300;400;500;600;700;800;900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--background: #ffffff;
+	--text: #243746;
+}
+
+.url {
+	text-decoration: underline;
+	color: #219ebc;
+}
+
+body {
+	background-color: var(--background);
+	color: var(--text);
+	transition: background-color 0.3s;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+	transition: all 0.3s;
+	max-height: 800px;
+	overflow: hidden;
+}
+
+.slide-enter,
+.slide-leave-to {
+	opacity: 0;
+	max-height: 0px;
+}
+
+.page-enter-active,
+.page-leave-active {
+	transition: opacity 0.5s;
+}
+
+.page-enter,
+.page-leave-to {
+	opacity: 0;
+}
+
+* {
+	font-family: 'Noto Sans Mono', 'Source Sans Pro', monospace, sans-serif;
+}
+
+.prose-base :where(h1):not(:where([class~="not-prose"] *)) {
+	@apply text-3xl !important;
+}
