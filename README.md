@@ -1,7 +1,7 @@
 <div align="center">
   <br />
   <p>
-    <a href="https://github.com/PenPow/Website"><img src="./assets/img/avatar.png" width="546" alt="penpow" /></a>
+    <a href="https://github.com/PenPow/Website"><img src="./static/img/me.png" width="546" alt="penpow" /></a>
   </p>
   <br />
 </div>
