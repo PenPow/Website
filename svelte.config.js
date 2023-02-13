@@ -1,6 +1,6 @@
 import { mdsvex } from 'mdsvex';
 import mdsvexConfig from './mdsvex.config.js';
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-cloudflare';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -14,7 +14,7 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		version: {
-			name: process.env.DEVELOPMENT ? 'next' : process.env.CF_PAGES_COMMIT_SHA ?? 'next'
+			name: process.env.DEVELOPMENT ? '@next' : process.env.CF_PAGES_COMMIT_SHA ?? '@next'
 		}
 	},
 };

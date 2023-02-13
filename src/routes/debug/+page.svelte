@@ -7,6 +7,11 @@
 	<p class="mt-4">
 		<b>Running In Development Environment?</b>&nbsp; {dev ? 'Yes' : 'No'}
 		<br />
-		<b>Version:</b>&nbsp; {version}
+		<b>Version:</b>&nbsp;
+		{#if version === "@next"}
+			{version}
+		{:else}
+			<a class="mt-4 text-2xl font-bold url" href="https://github.com/PenPow/Website/commit/{version}">{version}</a>
+		{/if}
 	</p>
 </div>
