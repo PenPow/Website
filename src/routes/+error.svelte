@@ -1,5 +1,4 @@
 <script>
-	import Copyright from '$lib/components/Copyright.svelte';
 	import Divider from '$lib/components/Divider.svelte';
 </script>
 
@@ -13,8 +12,4 @@
 	<p>
 		How did you get here? The page you tried to visit doesn't exist.
 	</p>
-
-	<Divider />
-
-	<Copyright />
 </div>

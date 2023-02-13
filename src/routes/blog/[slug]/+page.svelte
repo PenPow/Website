@@ -27,7 +27,4 @@
 			<Content />
 		</p>
 	</article>
-
-	<Divider />
-	<Copyright />
 </div>

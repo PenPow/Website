@@ -12,8 +12,11 @@ const config = {
 	preprocess: [vitePreprocess({ postcss: true }), mdsvex(mdsvexConfig)],
 
 	kit: {
-		adapter: adapter()
-	}
+		adapter: adapter(),
+		version: {
+			name: process.env.DEVELOPMENT ? 'next' : process.env.CF_PAGES_COMMIT_SHA ?? 'next'
+		}
+	},
 };
 
 export default config;

@@ -1,7 +1,6 @@
 <script>
 	import About from '$lib/components/About.svelte';
 	import Contact from '$lib/components/Contact.svelte';
-	import Copyright from '$lib/components/Copyright.svelte';
 	import Divider from '$lib/components/Divider.svelte';
 	import Projects from '$lib/components/Projects.svelte';
 	import Posts from '$lib/components/Posts.svelte';
@@ -24,7 +23,4 @@
 	<Projects />
 	<Divider />
 	<Contact />
-	<Divider />
-
-	<Copyright />
 </div>
