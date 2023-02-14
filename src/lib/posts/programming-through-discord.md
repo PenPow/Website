@@ -2,7 +2,7 @@
 title: "My Journey of Programming through Discord"
 description: "I learnt Javascript and Typescript through Discord. I look back at how I learnt, what I could do better, and how I created bots"
 cover: "discord.jpg"
-major: true
+major: false
 ---
 
 I feel like I should put a small disclaimer before this article
