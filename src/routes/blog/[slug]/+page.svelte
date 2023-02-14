@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Copyright from "$lib/components/Copyright.svelte";
 	import Divider from "$lib/components/Divider.svelte";
 
 	import type { PageData } from "./$types";

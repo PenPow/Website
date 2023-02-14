@@ -1,6 +1,6 @@
 import type { PageLoadEvent } from "./$types";
 
-export const prerender = false;
+export const prerender = true;
 
 export async function load({ params }: PageLoadEvent) {
 	// default is a svelte component, im not going to bother typing it here

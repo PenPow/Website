@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { fetchMarkdownPosts } from "$lib/utils/fetchPosts";
 	import { onMount } from "svelte";
 	import Post from "./internal/Post.svelte";
 
@@ -19,9 +20,7 @@
 	let posts: IPost[] = [];
 
 	onMount(async () => {
-		const fetched = await fetch('/api/posts');
-
-		posts = await fetched.json();
+		posts = await fetchMarkdownPosts();
 	})
 </script>
 

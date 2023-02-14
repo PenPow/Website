@@ -4,6 +4,11 @@
 	import Header from "$lib/components/Header.svelte";
 
 	import "$lib/styles/App.css";
+
+	import { preloadCode } from "$app/navigation";
+	import { onMount } from "svelte";
+	
+	onMount(async () => await preloadCode("/blog", "/blog/[slug]"))
 </script>
 
 <Header />

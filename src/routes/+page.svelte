@@ -5,6 +5,7 @@
 	import Projects from '$lib/components/Projects.svelte';
 	import Posts from '$lib/components/Posts.svelte';
 	import Skills from '$lib/components/Skills.svelte';
+
 </script>
 
 <div class="max-w-3xl px-8 mt-24 mx-auto">
