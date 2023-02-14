@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let link: string = "about:blank";
+	export let link: string;
 	export let icon: string;
 	export let name: string;
 	export let color: string;
@@ -7,7 +7,7 @@
 	export let year: string | null;
 </script>
 
-<a href={link} target="_blank" rel="noreferrer" class="flex-1 bg-opacity-30 p-4 my-2 rounded-md hover:scale-105 transform ease-in-out duration-300 {color}">
+<a href={link} class="flex-1 bg-opacity-30 p-4 my-2 rounded-md hover:scale-105 transform ease-in-out duration-300 {color}">
 	<div class="flex flex-row items-center">
 		<img
           src="{icon.startsWith("http") ? icon : `/img/${icon}`}"

@@ -10,6 +10,6 @@
 		<br /><br />
 		I've worked on many projects, from small personal passion projects, to freelance work helping build communities with thousands of members.
 		<br /><br />
-		I am also an avid supporter of building online communities, through my work at community management at <code>&lt;/design&gt;</code>
+		I am also an avid supporter of building online communities, through my work at community management at &lt;/design&gt;
 	</p>
 </div>

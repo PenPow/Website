@@ -10,4 +10,4 @@
 <h2 class="ml-2 mt-4 text-xl font-bold">Software I Use</h2>
 <img class="mt-4 ml-2" src="https://skillicons.dev/icons?theme=light&i=docker,discord,git,postman,vscode" alt="Software I Use"/>
 <h2 class="ml-2 mt-4 text-xl font-bold">Interested In</h2>
-<img class="mt-4 ml-2" src="https://skillicons.dev/icons?theme=light&i=cs,haskell,deno,emacs," alt="Tooling that I am interested In"/>
+<img class="mt-4 ml-2" src="https://skillicons.dev/icons?theme=light&i=cs,haskell,deno,emacs" alt="Tooling that I am interested In"/>

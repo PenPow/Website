@@ -3,7 +3,7 @@
 	import { slide } from 'svelte/transition';
 
 	interface IProject {
-		link: string;
+		link?: string;
 		icon: string;
 		name: string;
 		color: string;
@@ -16,7 +16,7 @@
 		{
 			icon: "presenter.png",
 			name: "Presenter",
-			link: "about:blank",
+			link: "https://github.com/PenPow",
 			year: "In Development",
 			color: "bg-purple-400",
 			major: false,
@@ -25,7 +25,6 @@
 		{
 			icon: "hercules.png",
 			name: "Hercules",
-			link: "about:blank",
 			year: "January 2023 - Present",
 			color: "bg-slate-400",
 			major: true,
@@ -34,7 +33,6 @@
 		{
 			icon: "sentry.png",
 			name: "Sentry",
-			link: "https://github.com/PenPow/Sentry",
 			year: "June 2022 - Present",
 			color: "bg-emerald-300",
 			major: true,
@@ -43,7 +41,7 @@
 		{
 			icon: "design-logo.png",
 			name: "</design>",
-			link: "about:blank",
+			link: "/projects/design",
 			year: "June 2020 - Febrary 2023",
 			color: "bg-blue-400",
 			major: false,
@@ -58,7 +56,7 @@
 <div class="flex flex-col mt-2">
 	{#each projects as project}
 			{#if project.major}
-				<Project link={project.link} icon={project.icon} name={project.name} description={project.description} year={project.year} color={project.color} />
+				<Project link={project.link ?? `/projects/${project.name.toLowerCase()}`} icon={project.icon} name={project.name} description={project.description} year={project.year} color={project.color} />
 			{/if}
 	{/each}
 
@@ -74,7 +72,7 @@
 			{#each projects as project}
 				{#if !project.major}
 					<div class="hover:scale-105 transform ease-in-out duration-300" transition:slide>
-						<Project link={project.link} icon={project.icon} name={project.name} description={project.description} year={project.year} color={""} />
+						<Project link={project.link ?? `/projects/${project.name.toLowerCase()}`} icon={project.icon} name={project.name} description={project.description} year={project.year} color={""} />
 					</div>
 				{/if}
 			{/each}
