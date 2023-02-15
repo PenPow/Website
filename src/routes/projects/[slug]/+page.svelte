@@ -3,8 +3,20 @@
 
 	import type { PageData } from "./$types";
 
+	import { page } from "$app/stores"
+
 	export let data: PageData;
 </script>
+
+<svelte:head>
+	<meta property="og:title" content="{data.name}"/>
+	<meta property="og:type" content="article"/>
+	<meta property="og:description" content="{data.summary}"/>
+	<meta property="og:image" content="{data.logo.startsWith("http") ? data.logo : `https://www.penpow.dev/img/${data.logo}`}"/>
+	<meta property="og:image:type" content="image/png"/>
+	<meta property="og:image:alt" content="{data.name}"/>
+	<meta property="og:url" content="{$page.url.href}"/>
+</svelte:head>
 
 <div class="max-w-3xl px-8 mt-24 mx-auto">
 	<div class="max-w-xl">

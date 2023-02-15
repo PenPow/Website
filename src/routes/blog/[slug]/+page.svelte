@@ -6,7 +6,19 @@
 	export let data: PageData;
 
 	const { Content, title, description, cover } = data;
+
+	import { page } from "$app/stores"
 </script>
+
+<svelte:head>
+	<meta property="og:title" content="{title}"/>
+	<meta property="og:type" content="article"/>
+	<meta property="og:description" content="{description}"/>
+	<meta property="og:image" content="{cover.startsWith("http") ? cover : `https://www.penpow.dev/img/${cover}`}"/>
+	<meta property="og:image:type" content="image/png"/>
+	<meta property="og:image:alt" content="{title}"/>
+	<meta property="og:url" content="{$page.url.href}"/>
+</svelte:head>
 
 <div class="max-w-3xl px-8 mt-24 mx-auto">
 	<div class="max-w-xl">
