@@ -14,7 +14,7 @@
 
 	const projects: IProject[] = [
 		{
-			icon: "presenter.png",
+			icon: "presenter.webp",
 			name: "Presenter",
 			link: "https://github.com/PenPow",
 			year: "In Development",
@@ -23,7 +23,7 @@
 			description: "A new form of powerpoint, designed for rapidly building code oriented presentations in your terminal.",
 		},
 		{
-			icon: "hercules.png",
+			icon: "hercules.webp",
 			name: "Hercules",
 			year: "January 2023 - Present",
 			color: "bg-slate-400",
@@ -31,7 +31,7 @@
 			description: "Freelance project that syncs data between Roblox, Discord and Postgres to share user information between servers",
 		},
 		{
-			icon: "sentry.png",
+			icon: "sentry.webp",
 			name: "Sentry",
 			year: "June 2022 - Present",
 			color: "bg-emerald-300",
@@ -39,7 +39,7 @@
 			description: "Discord's Antivirus! Filter your server with on demand file scanning",
 		},
 		{
-			icon: "design-logo.png",
+			icon: "design-logo.webp",
 			name: "</design>",
 			link: "/projects/design",
 			year: "June 2020 - Febrary 2023",

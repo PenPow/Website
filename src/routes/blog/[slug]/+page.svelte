@@ -15,7 +15,7 @@
 	<meta property="og:type" content="article"/>
 	<meta property="og:description" content="{description}"/>
 	<meta property="og:image" content="{cover.startsWith("http") ? cover : `https://www.penpow.dev/img/${cover}`}"/>
-	<meta property="og:image:type" content="image/png"/>
+	<meta property="og:image:type" content="image/webp"/>
 	<meta property="og:image:alt" content="{title}"/>
 	<meta property="og:url" content="{$page.url.href}"/>
 </svelte:head>

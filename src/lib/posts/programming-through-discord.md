@@ -1,7 +1,7 @@
 ---
 title: "My Journey of Programming through Discord"
 description: "I learnt Javascript and Typescript through Discord. I look back at how I learnt, what I could do better, and how I created bots"
-cover: "discord.jpg"
+cover: "discord.webp"
 major: false
 ---
 
@@ -29,7 +29,7 @@ The issue first arised when I wanted to expand upon my bot to use some of the ne
 
 While I understood what my code was doing, I had no clue how to build upon it or fix any issues I had with it. My code was inevitably full of bugs and errors, but these were all foreign concepts to me, as when following a tutorial, you are guided step by step through writing code that has no issues.
 
-![tutorial hell meme](/img/tutorial-hell-dwight.png)
+![tutorial hell meme](/img/dwight-tutorial-hell.webp)
 
 ## Escaping Tutorial Hell
 

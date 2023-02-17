@@ -15,6 +15,6 @@
 	<p>
 		I'm not too sure how you ended up here, but while you are here, enjoy this picture of a perfect cup of tea.
 
-		<img src="/img/418-error.jpg" alt="cup of tea" class="mt-5 ml-2 h-96 rounded-md" />
+		<img src="/img/418-error.webp" alt="cup of tea" class="mt-5 ml-2 h-96 rounded-md" />
 	</p>
 </div>

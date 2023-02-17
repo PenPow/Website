@@ -1,7 +1,7 @@
 ---
 title: "Hercules End User Manual"
 description: ""
-cover: "hercules.png"
+cover: "hercules.webp"
 major: false
 hidden: true
 ---
