@@ -13,7 +13,7 @@
 	<meta property="og:type" content="article"/>
 	<meta property="og:description" content="{data.summary}"/>
 	<meta property="og:image" content="{data.logo.startsWith("http") ? data.logo : `https://www.penpow.dev/img/${data.logo}`}"/>
-	<meta property="og:image:type" content="image/png"/>
+	<meta property="og:image:type" content="image/webp"/>
 	<meta property="og:image:alt" content="{data.name}"/>
 	<meta property="og:url" content="{$page.url.href}"/>
 </svelte:head>

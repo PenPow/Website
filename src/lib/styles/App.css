@@ -12,7 +12,11 @@
 
 .url {
 	text-decoration: underline;
-	color: #219ebc;
+	transition: 0.3s;
+}
+
+.url:hover {
+	color: #0069D1;
 }
 
 body {

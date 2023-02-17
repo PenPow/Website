@@ -1,11 +1,11 @@
 ---
 title: "Svelte is the Future of Web Development"
 description: "Every JS Framework Claims to be the \"Next Big Thing\", the only difference is that Svelte is."
-cover: "svelte.png"
+cover: "svelte.webp"
 major: true
 ---
 
-![days since last js framework released meme](/img/js-framework-meme.jpg)
+![days since last js framework released meme](/img/js-framework-meme.webp)
 
 While it has felt like there has been a new framework release every single day for the past few months, with each claiming that they are the "next big thing" which will "revolutionise" web development, very few have stood out as actual contenders for being a major and significant improvement.
 
@@ -27,7 +27,7 @@ But why?
 
 React, Vue and Angular all use a rendering architecture known as Virtual DOM. Svelte tells us to think differently.
 
-![think different](/img/think-different.png)
+![think different](/img/think-different.webp)
 
 Rich Harris, the creator of Svelte made a [brilliant article](https://svelte.dev/blog/virtual-dom-is-pure-overhead) on the Svelte blog about Virtual DOM
 
@@ -64,8 +64,8 @@ My blog system was hacked together through a mixture of google searches and tria
 
 While the community has expanded rapidly over the past few years from how amazing Svelte is, its still tiny compared to those of React, Angular and Vue.
 
-![NPM Downloads Per Month](/img/svelte-npm.png)
-![Google Trends](/img/svelte-google-trends.png)
+![NPM Downloads Per Month](/img/svelte-npm.webp)
+![Google Trends](/img/svelte-google-trends.webp)
 
 # Conclusion
 
@@ -77,7 +77,7 @@ React has Facebook, Angular has Google, Vue has a massive Open Source community 
 
 Svelte is growing though, and quickly too
 
-![Svelte Growth Statistics](/img/svelte-growth.png)
+![Svelte Growth Statistics](/img/svelte-growth.webp)
 
 and this is a good thing.
 

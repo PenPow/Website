@@ -43,8 +43,8 @@ const projectNarratives = {
 			status: 'Currently in maintenance, rewrite in development',
 			demo: "https://sentry.penpow.dev/",
 			source: "https://github.com/PenPow/Sentry",
-			logo: "sentry.png",
-			image: "sentry-project-page.png",
+			logo: "sentry.webp",
+			image: "sentry-project-page.webp",
 			overview: `Sentry was my first major development project. I have been refining and building upon the foundations of it since January 2022.
 			
 			Originally, it started as a fun hobby project in an attempt to learn Typescript by applying it to a real-world idea, but as I progressed through the development, and become more competant with using Typescript, I moved to implement new features that I hadn't seen used before on moderation bots.
@@ -68,7 +68,7 @@ const projectNarratives = {
 			],
 			technologies: 'typescript,docker,prisma,postgres',
 			status: 'Actively used by over 150 people daily',
-			logo: "hercules.png",
+			logo: "hercules.webp",
 			image: null,
 			overview: `Hercules was a project I developed for a client who wanted a system to manage and store user information for easy recall and modification.
 			
@@ -79,7 +79,7 @@ const projectNarratives = {
 			name: '</design>',
 			summary: "</design> was a development community of 600 members on Discord that I co-founded and ultimately ended up running. As the community manager, I grew the server from 0 members up to 600, fostering a welcoming and thriving community of web developers!",
 			status: "Shut down as of February 2023",
-			logo: "design-logo.png",
+			logo: "design-logo.webp",
 			overview: `&lt;/design&gt; was a community I started with my friend midway through the first COVID-19 lockdown here in the UK.
 			
 			Over the 1000(-ish) days working as the community manager, I supported a staff team of 12 as I grew the server into a healthy community of web developers.`,
