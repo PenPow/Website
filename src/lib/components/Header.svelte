@@ -1,11 +1,11 @@
 <script lang="ts">
-	import HomeButton from '$lib/components/internal/Home.svelte';
+	import Path from './internal/Path.svelte';
 </script>
 
 <div class="my-4 mx-5">
 	<div class="flex flex-row">
 		<div class="mr-auto">
-			<HomeButton />
+			<Path />
 		</div>
 	</div>
 </div>
