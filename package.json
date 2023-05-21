@@ -27,7 +27,7 @@
 		"mdsvex": "^0.10.6",
 		"postcss": "^8.4.21",
 		"prettier": "^2.8.0",
-		"prettier-plugin-svelte": "^2.8.1",
+		"prettier-plugin-svelte": "^2.10.0",
 		"rehype-accessible-emojis": "^0.3.2",
 		"remark-gfm": "^3.0.1",
 		"remark-github": "^11.2.4",
