@@ -11,7 +11,7 @@
 		{#if version === "@next"}
 			{version}
 		{:else}
-			<a class="mt-4 font-bold url" href="https://github.com/PenPow/Website/commit/{version}">{version}</a>
+			<a class="mt-4 font-bold url" href="https://github.com/PenPow/Website/commit/{version}">{version.substring(0, 8)}</a>
 		{/if}
 	</p>
 </div>
