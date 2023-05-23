@@ -4,15 +4,13 @@
 
 	import Icon from '@iconify/svelte';
 	import folderFill from '@iconify/icons-bi/folder-fill';
-
-	// const paths = $page.url.pathname.split('/')
 </script>
 
 <div class="h-10 rounded-md text-gray-700 flex items-center gap-4 fixed">
 	<a href="/">
 		<Icon icon={folderFill} color="#374151" width="32" height="32" />
 	</a>
-	<!-- <Link href={`/${segment}`}>{segment}</Link> -->
+
 	{#if $page.url.pathname === '/'}
 		<p>/ </p>
 	{:else if $page.error}

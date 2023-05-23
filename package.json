@@ -41,6 +41,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@iconify/icons-ion": "^1.2.8",
 		"@sveltejs/adapter-cloudflare": "^2.2.4"
 	}
 }
