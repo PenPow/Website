@@ -9,7 +9,9 @@ const pictures = [
 	"https://cdn.penpow.dev/u/5d6a300f-2aa3-4a6f-a7a9-f1c24d153c8a.jpg",
 	"https://cdn.penpow.dev/u/41243052-9866-446b-acc3-3ea260deb739.jpg",
 	"https://cdn.penpow.dev/u/14558614-463b-4fc4-b864-dde6851b467c.jpg",
-	"https://cdn.penpow.dev/u/801375cc-01a6-41e9-937e-010e198bd636.png"
+	"https://cdn.penpow.dev/u/801375cc-01a6-41e9-937e-010e198bd636.png",
+	"https://cdn.penpow.dev/u/fa6643a8-e706-4209-81dc-c6d58092b328.png",
+	"https://cdn.penpow.dev/u/951d3215-3fd8-4cf4-827c-71ef2e22f64b.png"
 ]
 
 export async function GET({ setHeaders, fetch }) {
