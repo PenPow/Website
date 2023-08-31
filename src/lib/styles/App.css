@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100;200;300;400;500;600;700;800;900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 
 @tailwind base;
@@ -49,13 +48,26 @@ body {
 }
 
 * {
-	font-family: 'Noto Sans Mono', 'Source Sans Pro', monospace, sans-serif;
+	font-family: 'Noto Sans Mono', monospace, sans-serif;
 }
 
 .prose-base :where(h1):not(:where([class~="not-prose"] *)) {
 	@apply text-3xl !important;
 }
 
+@font-face {
+    font-family: 'AbrilFatface';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''),
+        url('/fonts/AbrilFatface.woff2') format('woff2'),
+}
+
 h1, h2, h3, h4, h5, h6 {
 	color: #243746 !important;
+}
+
+h1 > div {
+	font-family: 'AbrilFatface', 'Noto Sans Mono', monospace, sans-serif !important;
+	font-size: 42px;
 }
