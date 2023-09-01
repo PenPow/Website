@@ -14,15 +14,6 @@
 
 	const projects: IProject[] = [
 		{
-			icon: "presenter.webp",
-			name: "Presenter",
-			link: "https://github.com/PenPow",
-			year: "In Development",
-			color: "bg-purple-400",
-			major: false,
-			description: "A new form of powerpoint, designed for rapidly building code oriented presentations in your terminal.",
-		},
-		{
 			icon: "hercules.webp",
 			name: "Hercules",
 			year: "January 2023 - Present",
