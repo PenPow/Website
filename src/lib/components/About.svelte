@@ -2,7 +2,7 @@
 	<h1 class="mt-4 text-3xl font-bold flex md:items-end md:flex-row flex-col">
 		<div>Joshua Clements</div>
 		<div class="flex md:ml-3">
-			<div class="text-lg">[any/all]</div>
+			<div class="text-lg invisible">[any/all]</div>
 		</div>
 	</h1>
 	<p class="mt-4">
