@@ -7,7 +7,7 @@ import compress from "astro-compress";
 
 export default defineConfig({
   site: "https://www.penpow.dev",
-  integrations: [icon(), robotsTxt(), markdoc(), sitemap(), tailwind(), compress()],
+  integrations: [icon(), robotsTxt(), sitemap(), tailwind(), compress()],
   image: {
 	domains: ['avatars.githubusercontent.com']
   }
