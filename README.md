@@ -1,11 +1,3 @@
-<div align="center">
-  <br />
-  <p>
-    <a href="https://github.com/PenPow/Website"><img src="./static/img/uncompressed/me.png" width="546" alt="penpow" /></a>
-  </p>
-  <br />
-</div>
+# About
 
-## About
-
-This is my personal portfolio website
+Personal website
