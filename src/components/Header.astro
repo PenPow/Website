@@ -6,7 +6,10 @@ import SocialButton from './internal/SocialButton.astro';
 ---
 
 <header class="mb-4">
-	<Image class="w-32 h-32 rounded-3xl inline" src={ProfilePicture} alt="Me"/>
+	<a href="/">
+		<Image class="w-32 h-32 rounded-3xl inline" src={ProfilePicture} alt="Me"/>
+		<p class="sr-only">Button to go back to home page</p>
+	</a>
 	<h1 class="text-zinc-800 dark:text-zinc-100 text-5xl font-title font-bold mt-4">
 		Joshua Clements
 	</h1>
