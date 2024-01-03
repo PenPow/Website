@@ -53,11 +53,6 @@ export const projects: Project[] = [
 		language: "Astro",
 	},
 	{
-		type: "remote",
-		repo: "PenPow/Website",
-		description: 'This very website, built with Astro.'
-	},
-	{
 		type: "local",
 		name: "</design>",
 		description: "Community manager at </design> a development community of 600 web developers from June 2020 to February 2023.",
