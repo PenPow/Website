@@ -1,0 +1,24 @@
+---
+import { Icon } from "astro-icon/components";
+
+const url = Astro.url;
+const split = url.pathname.split('/');
+---
+
+<div class="left-4 top-4 fixed">
+	<div class="flex flex-row gap-2 items-center">
+		<a href="/">
+			<Icon name="heroicons:folder-open-solid" width={36} height={36} />
+			<p class="sr-only">Home Button</p>
+		</a>
+
+		{split[0] === "" 
+			? <p class="ml-2 text-3xl">/</p> 
+			: split.slice(1).map(path => (
+				<p class="ml-2 text-3xl">/</p> 
+				<a href={split.slice(0, split.indexOf(path) + 1).join('/')} class="text-2xl rounded-md hover:bg-gray-200 px-2 py-1/2">{path}</a>
+			))
+		}
+	</div>
+
+</div>

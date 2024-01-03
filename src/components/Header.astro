@@ -1,0 +1,21 @@
+---
+import { Image } from 'astro:assets';
+import ProfilePicture from "../assets/pfp.webp";
+import SocialButton from './internal/SocialButton.astro';
+
+---
+
+<header class="mb-4">
+	<Image class="w-32 h-32 rounded-3xl inline" src={ProfilePicture} alt="Me"/>
+	<h1 class="text-zinc-800 dark:text-zinc-100 text-5xl font-title font-bold mt-4">
+		Joshua Clements
+	</h1>
+	<div class="flex flex-row gap-2 mt-2 items-center">
+		<p class="text-zinc-800 dark:text-zinc-100 text-xl font-semibold">Software Developer [any/all]</p>
+		<div class="flex flex-row gap-2">
+			<SocialButton link="mailto:josh@penpow.dev" alt="Email link" icon='ic:round-email' />
+			<SocialButton link="https://www.discord.com/users/207198455301537793" alt="Discord profile link" icon='ic:baseline-discord' />
+			<SocialButton link="https://www.github.com/PenPow" alt="Github profile link" icon='mdi:github' />
+		</div>
+	</div>
+</header>
