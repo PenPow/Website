@@ -27,14 +27,14 @@ const url = fetchedProject?.url
 			{url !== undefined
 				? (
 					<a href={url} class="flex items-center gap-x-2 font-semibold hover:underline" target="_blank" rel="noopener noreferrer">
-						<!-- It works - no clue why this hates me -->
+						<!-- @ts-expect-error -->
 						<Image class="rounded-md" src={fetchedProject.icon} alt="Project icon" width={28} height={28}/>
 						{fetchedProject.name}
 					</a>
 				) 
 				: (
 					<div class="flex items-center gap-x-2 font-semibold">
-						<!-- still works -->
+						<!-- @ts-expect-error -->
 						<Image class="rounded-md" src={fetchedProject.icon} alt="Project icon" width={28} height={28}/>
 						{fetchedProject.name}
 					</div>
