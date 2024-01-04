@@ -1,2 +1,0 @@
-https://cdn.penpow.dev/u/1514e738-e1d3-4172-af0c-cb9e2d7043e1.png 
-^ grid like system to display projects, either linking straight to github or to a designated page
