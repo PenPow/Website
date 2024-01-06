@@ -1,28 +1,30 @@
 ---
-import Projects from "../components/Projects.astro";
-import PageLayout from "../layouts/Base.astro";
+import Heading from "@components/Heading.astro";
+import Posts from "@components/Posts.astro";
+import Projects from "@components/Projects.astro";
+import PageLayout from "@layouts/Base.astro";
 
 import { Icon } from "astro-icon/components";
 ---
 
 <PageLayout meta={{ title: "Home" }}>
 	<section>
-		<div class="flex items-center">
-			<h2 class="text-zinc-800 dark:text-zinc-100 mt-4 mb-3 text-3xl font-bold">About</h2>
-			<div class="h-[1px] grow bg-black/10 dark:bg-white/20 mt-3 mx-4" />
+		<Heading title="About">
 			<div class="ml-auto mt-2 flex items-center gap-2">
 				<p class="mt-1" id="time">--:--</p>
 				<Icon name="heroicons:clock" class="mt-1" width={24} height={24} />
 			</div>
-		</div>
+		</Heading>
 		<p class="mb-4 text-lg">
 			I'm Josh, a backend software engineer. I'm an avid supporter of building thriving online communities, through my work in community management at &lt;/design&gt;, to Sentry — a Discord Bot designed to help automate moderation of file attachments.
 	</section>
 	<section>
-		<div class="flex items-center">
-			<h2 class="text-zinc-800 dark:text-zinc-100 mt-4 mb-3 text-3xl font-bold">Projects</h2>
-			<div class="h-[1px] grow bg-black/10 dark:bg-white/20 mt-3 mx-4" />
-		</div>
+		<Heading title="Posts" />
+		<Posts />
+	</section>
+	<section>
+		<Heading title="Projects" />
+
 		<Projects />
 	</section>
 </PageLayout>
@@ -32,15 +34,15 @@ import { Icon } from "astro-icon/components";
 		element.textContent = time;
 	}
 
-	addEventListener("DOMContentLoaded", () => {
+	function listen() {
 		const clock = document.getElementById('time');
-
 		if(!clock) return console.warn("No time element found");
 
 		const formatter = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/London", timeStyle: "short" });
 
 		updateTime(clock, formatter.format(new Date()));
+		window.setInterval(() => updateTime(clock, formatter.format(new Date())), 1000);
+	}
 
-		setInterval(() => updateTime(clock, formatter.format(new Date())), 1000);
-	})
+	document.addEventListener("astro:page-load", listen);
 </script>

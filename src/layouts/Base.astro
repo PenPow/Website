@@ -1,8 +1,9 @@
 ---
-import Header from "../components/Header.astro"
-import Footer from "../components/Footer.astro";
-import { Icon } from 'astro-icon/components'
-import { siteConfig } from "../site.config.ts";
+import Header from "@components/Header.astro"
+import Footer from "@components/Footer.astro";
+import NavSection from "@components/NavSection.astro";
+import { siteConfig } from "@site-config";
+import { ViewTransitions } from "astro:transitions";
 
 interface Props {
 	meta: {
@@ -44,7 +45,7 @@ const siteTitle = `${title} ${titleSeparator} ${siteConfig.title}`;
 		<meta name="theme-color" content="#61728c" />
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content={title} />
+		<meta property="og:title" content={siteTitle} />
 		<meta property="og:description" content={description} />
 		<meta property="og:url" content={canonicalURL} />
 		<meta property="og:site_name" content={siteConfig.title} />
@@ -52,22 +53,32 @@ const siteTitle = `${title} ${titleSeparator} ${siteConfig.title}`;
 
 		<meta property="twitter:card" content="summary" />
 		<meta property="twitter:url" content={canonicalURL} />
-		<meta property="twitter:title" content={title} />
+		<meta property="twitter:title" content={siteTitle} />
 		<meta property="twitter:description" content={description} />
 
 		<link rel="sitemap" href="/sitemap-index.xml" />
 
 		<meta name="generator" content={Astro.generator} />
-		
+
+		<ViewTransitions />
+
 		<script is:inline>
 			const STORAGE_KEY = "theme";
 
+			interval = undefined;
+
 			function toggleTheme(activeTheme) {
 				localStorage.setItem(STORAGE_KEY, activeTheme);
+
+				clearTimeout(interval)
+
+				document.documentElement.classList.add("transitioning");
 				
-				document.documentElement.setAttribute("data-theme", activeTheme);
+				document.documentElement.setAttribute("data-theme", activeTheme === "light" ? "github-light" : "github-dark");
 				document.documentElement.classList.remove("light", "dark");
 				document.documentElement.classList.add(activeTheme);
+
+				interval = setTimeout(() => document.documentElement.classList.remove("transitioning"), 210);
 			}
 
 			const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
@@ -82,20 +93,21 @@ const siteTitle = `${title} ${titleSeparator} ${siteConfig.title}`;
 				});
 			}
 
-			document.addEventListener("DOMContentLoaded", listenForButton)
+			document.addEventListener('astro:before-swap', (ev) => {
+				window.clearTimeout(interval);
 
-			document.addEventListener("astro:after-swap", () => {
-				toggleTheme(localStorage.getItem(STORAGE_KEY))
-				listenForButton()
+				const activeTheme = localStorage.getItem(STORAGE_KEY)
+				
+				ev.newDocument.documentElement.setAttribute("data-theme", activeTheme === "light" ? "github-light" : "github-dark");
+				ev.newDocument.documentElement.classList.remove("light", "dark");
+				ev.newDocument.documentElement.classList.add(activeTheme);
 			})
+
+			document.addEventListener("astro:page-load", listenForButton)
 		</script>
 	</head>
 	<body class="bg-zinc-50 dark:bg-zinc-900">
-		<!-- <PathNavigation /> -->
-		<button id="themeswitcher" class="block lg:fixed h-12 w-12 right-4 top-4 ml-auto">
-			<Icon class="dark:hidden" name="heroicons:moon" width={48} height={48} />
-			<Icon class="hidden dark:block" name="heroicons:sun" width={48} height={48} />
-		</button>
+		<NavSection />
 		<div class="max-w-3xl px-8 mt-8 lg:mt-24 mx-auto">
 			<Header />
 			<main id="main">
@@ -107,13 +119,14 @@ const siteTitle = `${title} ${titleSeparator} ${siteConfig.title}`;
 </html>
 
 <style>
-	@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Work+Sans:wght@400;500;600;700;800&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Work+Sans:wght@400;500;600;700;800&display=swap');
 
 	:global(.dark) {
 		color-scheme: dark;
 	}
 
-	* {
+	body,
+	body *:not(a) {
 		@apply transition-colors duration-200;
 	}
 </style>

@@ -1,7 +1,7 @@
-import type { Language } from "./utils/languages";
-import DesignLogo from "./assets/design-logo.webp";
-import SentryLogo from "./assets/sentry.png";
-import BadgesIcon from "./assets/badges.svg";
+import type { Language } from "@utils/languages";
+import DesignLogo from "@assets/design-logo.webp";
+import SentryLogo from "@assets/sentry.png";
+import BadgesIcon from "@assets/badges.svg";
 
 export type SiteConfig = {
 	author: string;

@@ -1,8 +1,8 @@
 ---
-import type { LocalProject, Project } from "../../site.config";
-import { Image } from "astro:assets";
-import { languageColours } from "../../utils/languages";
-import { fetchRemoteProject } from "../../utils/projects";
+import type { LocalProject, Project } from "@site-config";
+import { languageColours } from "@utils/languages";
+import { fetchRemoteProject } from "@utils/projects";
+import Card from "@components/internal/Card.astro";
 
 interface Props {
 	project: Project
@@ -23,32 +23,13 @@ const url = fetchedProject?.url
 ---
 
 {fetchedProject && (
-		<div class="flex flex-col w-full gap-x-3 gap-y-2 rounded-xl bg-gray-200/60 dark:bg-white/10 md:min-h-[100px] md:p-4">
-			{url !== undefined
-				? (
-					<a href={url} class="flex items-center gap-x-2 font-semibold hover:underline" target="_blank" rel="noopener noreferrer">
-						<!-- @ts-expect-error -->
-						<Image class="rounded-md" src={fetchedProject.icon} alt="Project icon" width={28} height={28}/>
-						{fetchedProject.name}
-					</a>
-				) 
-				: (
-					<div class="flex items-center gap-x-2 font-semibold">
-						<!-- @ts-expect-error -->
-						<Image class="rounded-md" src={fetchedProject.icon} alt="Project icon" width={28} height={28}/>
-						{fetchedProject.name}
-					</div>
-				)
-			}
+	<Card title={fetchedProject.name} description={fetchedProject.description} icon={fetchedProject.icon} url={url}>
+		<div class="flex w-full grow flex-row items-center gap-x-2 self-end">
+			<div class="transition-colors duration-200 ml-auto flex items-center gap-x-1 self-end text-xs text-gray-600 dark:text-white/50">
+				<div class="h-[10px] w-[10px] rounded-full" style={{ backgroundColor: languageColours[fetchedProject.language] }}/>
 
-			<p class="line-clamp-2 text-xs text-gray-600 dark:text-white/50 md:block">{fetchedProject.description}</p>
-
-			<div class="flex w-full grow flex-row items-center gap-x-2 self-end">
-				<div class="ml-auto flex items-center gap-x-1 self-end text-xs text-gray-600 dark:text-white/50">
-					<div class="h-[10px] w-[10px] rounded-full" style={{ backgroundColor: languageColours[fetchedProject.language] }}/>
-
-					{fetchedProject.language}
-				</div>
+				{fetchedProject.language}
 			</div>
 		</div>
+	</Card>
 )}
