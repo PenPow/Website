@@ -6,9 +6,7 @@ pubDate: 2024-01-03
 hidden: true
 ---
 
-import Heading from '@components/Heading.astro';
-
-<Heading title="Text Formatting" size="h3" />
+# Text Formatting
 
 Normal text obviously works, however specific formatting works as well.
 
@@ -22,22 +20,7 @@ Let that last point be ~~struck from the record~~
 
 > Another aside to state that emojis are made accessible with proper screenreader tags: 🚀🚀🚀
 
-<Heading title="Heading 1" size="h1" />
-
-<Heading title="Heading 2" size="h2" />
-
-<Heading title="Heading 3" size="h3" />
-
-<Heading title="Heading 4" size="h4" />
-
-<Heading title="Heading 5" size="h5" />
-
-<Heading title="Heading 6" size="h6" />
-
-<Heading title="Images" size="h3" />
-
-import { Image } from 'astro:assets';
-import Figure from '@components/Figure.astro';
+# Images
 
 Example of loading a remote image:
 <Image src="https://github.com/PenPow/Sentry/actions/workflows/CI.yml/badge.svg?branch=main&event=push" alt="Example image" width={205} height={20} />
@@ -47,14 +30,14 @@ Image located within a figure
 	<Image src="https://github.com/PenPow/Sentry/actions/workflows/CI.yml/badge.svg?branch=main&event=push" alt="Example image" width={205} height={20} />
 </Figure>
 
-<Heading title="Tables" size="h3" />
+# Tables
 
 | Syntax      | Description |
 | ----------- | ----------- |
 | Header      | Title       |
 | Paragraph   | Text        |
 
-<Heading title="Code" size="h3" />
+# Code
 
 ```sh frame="terminal" title="Terminal"
 #!/bin/sh
@@ -96,9 +79,7 @@ function add(a, b) {
   }
 ```
 
-<Heading title="Admonitions" size="h3" />
-
-import Admonition from '@components/Admonition.astro';
+# Admonitions
 
 <Admonition type="note" title="Note">
 This is ***not***e what you are looking for
@@ -124,44 +105,44 @@ I am warning you - this isn't what you are looking for
 Uh oh, this is not what you are looking for
 </Admonition>
 
-<Heading title="Footnotes" size="h3" />
+# Footnotes
 
 Here's a simple footnote[^2]
 
-<Heading title="Unordered Lists" size="h3" />
+# Unordered Lists
 
 - Item 1
 - Item 2
 - Item 3
 
-<Heading title="Ordered Lists" size="h3" />
+# Ordered Lists
 
 1. Hello
 2. World
 3. Help
 
-<Heading title="Nested Lists" size="h3" />
+# Nested Lists
 
 - Hello
 	- Why Hello
 	- This is a fine day
 - Yes it is
 
-<Heading title="Task Lists" size="h3" />
+# Task Lists
 
 - [x] Write the press release
 - [ ] Update the website
 - [ ] Contact the media
 
-<Heading title="Abbreviations" size="h3" />
+# Abbreviations
 
 <abbr title="GIF">Hi</abbr>
 
-<Heading title="Keyboard Elements" size="h3" />
+# KBD Element
 
 <kbd>CTRL</kbd>
 
-<Heading title="Block Quotes" size="h3" />
+# Blockquotes
 
 > This is a blockquote, which is commonly used when quoting another person or document.
 >

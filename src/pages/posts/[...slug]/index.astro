@@ -2,6 +2,14 @@
 import { getCollection } from 'astro:content';
 import PageLayout from "@layouts/Base.astro";
 import Heading from '@components/Heading.astro';
+import H3 from '@components/markdown/h3.astro';
+import H4 from '@components/markdown/h4.astro';
+import H5 from '@components/markdown/h5.astro';
+import H6 from '@components/markdown/h6.astro';
+import Figure from '@components/markdown/Figure.astro';
+import Admonition from '@components/markdown/Admonition.astro';
+import { Image } from 'astro:assets';
+import TableOfContents from '@components/TableOfContents.astro';
 
 export async function getStaticPaths() {
 	const entries = await getCollection('posts');
@@ -13,7 +21,7 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 
-const { Content } = await entry.render();
+const { Content, headings } = await entry.render();
 ---
 
 <PageLayout meta={{ title: entry.data.title }}>
@@ -25,16 +33,19 @@ const { Content } = await entry.render();
 		</Heading>
 
 		<p class="mb-4 text-lg">
-			<div class="transition-colors duration-200 max-w-fit border-l-4 border-l-zinc-400 bg-zinc-200 dark:bg-zinc-800 inline-block px-4 py-2">
+			<div class="transition-colors duration-200 max-w-fit rounded-r-md rounded-l-sm border-l-4 border-l-zinc-400 bg-zinc-200 dark:bg-zinc-800 inline-block px-4 py-2">
 				{entry.data.description}
+				<br/>
+				<br/>
+				<TableOfContents headings={headings} />
 			</div>
 
 			<br/>
 			<br/>
 
-			<div id="content" class="flex flex-col gap-y-4">
-				<Content />
-			</div>
+			<article id="content" class="flex flex-col gap-y-4">
+				<Content components={{ h1: H3, h2: H4, h3: H5, h4: H6, h5: H6, h6: H6, Figure: Figure, Admonition: Admonition, img: Image, Image }} />
+			</artic>
 		</p>
 	</section>
 </PageLayout>
@@ -73,6 +84,10 @@ const { Content } = await entry.render();
 	#content .footnotes ol,
 	#content .footnotes p {
 		@apply italic text-zinc-600 dark:text-zinc-400;
+	}
+
+	#content section.footnotes > div {
+		@apply hidden;
 	}
 
 	/* These specifiers are getting really deep */
