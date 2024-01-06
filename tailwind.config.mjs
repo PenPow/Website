@@ -8,6 +8,7 @@ export default {
 		extend: {
 			fontFamily: {
 				sans: ['"Work Sans"', ...defaultTheme.fontFamily.sans],
+				mono: ['"JetBrains Mono"', ...defaultTheme.fontFamily.mono],
 				title: ['"Abril Fatface"', '"Work Sans"', ...defaultTheme.fontFamily.sans]
 			}
 		},
