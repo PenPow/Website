@@ -5,12 +5,12 @@ import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import compress from "astro-compress";
 import mdx from "@astrojs/mdx";
-import expressiveCode from "astro-expressive-code";
+import expressiveCode, { type AstroExpressiveCodeOptions } from "astro-expressive-code";
+// @ts-expect-error no types but no types needed
 import a11yEmoji from '@fec/remark-a11y-emoji';
 import { pluginCollapsibleSections } from '@expressive-code/plugin-collapsible-sections';
 
-/** @type {import('astro-expressive-code').AstroExpressiveCodeOptions} */
-const astroExpressiveCodeOptions = {
+const astroExpressiveCodeOptions: AstroExpressiveCodeOptions = {
 	// Example: Change the themes
 	themes: ['github-dark', 'github-light'],
 	minSyntaxHighlightingColorContrast: 0,
