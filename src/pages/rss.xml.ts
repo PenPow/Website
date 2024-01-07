@@ -12,7 +12,6 @@ export const GET: APIRoute = async (context) => {
 		title: `PenPow's Blog`,
 		description: siteConfig.description,
 		site: context.site,
-		stylesheet: "/feed.xsl",
 		items: posts.map(post => ({
 			title: post.data.title,
 			pubDate: post.data.pubDate,
