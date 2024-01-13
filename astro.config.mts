@@ -18,7 +18,8 @@ const astroExpressiveCodeOptions: AstroExpressiveCodeOptions = {
 	styleOverrides: {
 		codeFontFamily: "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
 	},
-	plugins: [pluginCollapsibleSections()]
+	// @ts-ignore seems to be having problems with typescript when cloudflare deploys?
+	plugins: [pluginCollapsibleSections()] // FIXME: investigate
 }
 
 // https://astro.build/config
