@@ -28,7 +28,7 @@ const { Content, headings } = await entry.render();
 	<section>
 		<Heading title={entry.data.title}>
 			<div class="ml-auto mt-2 flex items-center gap-2">
-				<p class="mt-1">{new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/London", dateStyle: "short" }).format(entry.data.publishDate)}</p>
+				<p class="mt-1">{new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/London", dateStyle: "short" }).format(entry.data.pubDate)}</p>
 			</div>
 		</Heading>
 
