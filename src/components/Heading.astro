@@ -33,7 +33,7 @@ switch(HeadingSize) {
 }
 ---
 
-<div id={title.toLowerCase().replaceAll(" ", "-")} class="flex items-center">
+<div id={title.toLowerCase().replaceAll(" ", "-").replace(/[^a-zA-Z\s-\d]/g, '')} class="flex items-center">
 	<HeadingSize class={`text-zinc-800 dark:text-zinc-100 mt-4 mb-3 font-bold transition-colors duration-200 ${textSize}`}>{title}</HeadingSize>
 	<div class="transition-colors duration-200 h-[1px] grow bg-black/10 dark:bg-white/20 mt-3 mx-4" />
 
