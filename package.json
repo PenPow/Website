@@ -13,7 +13,7 @@
     "@astrojs/check": "^0.5.6",
     "@astrojs/mdx": "^2.1.1",
     "@astrojs/rss": "^4.0.5",
-    "@astrojs/sitemap": "^3.0.5",
+    "@astrojs/sitemap": "^3.1.1",
     "@astrojs/tailwind": "^5.1.0",
     "@expressive-code/plugin-collapsible-sections": "^0.32.4",
     "@fec/remark-a11y-emoji": "^4.0.2",
