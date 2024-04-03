@@ -24,7 +24,7 @@
     "@iconify-json/ph": "^1.1.11",
     "@iconify-json/ri": "^1.1.20",
     "@iconify-json/zondicons": "^1.1.8",
-    "astro": "^4.4.11",
+    "astro": "^4.5.12",
     "astro-compress": "^2.2.14",
     "astro-expressive-code": "^0.32.4",
     "astro-icon": "^1.1.0",
