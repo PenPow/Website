@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import icon from "astro-icon";
 import robotsTxt from "astro-robots-txt";
 import sitemap from "@astrojs/sitemap";
-import tailwind from "@astrojs/tailwind";
+// import tailwind from "@astrojs/tailwind";
 import compress from "astro-compress";
 import mdx from "@astrojs/mdx";
 import expressiveCode, { type AstroExpressiveCodeOptions } from "astro-expressive-code";
@@ -25,7 +25,7 @@ const astroExpressiveCodeOptions: AstroExpressiveCodeOptions = {
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.penpow.dev",
-  integrations: [icon(), robotsTxt(), sitemap(), tailwind(), expressiveCode(astroExpressiveCodeOptions), mdx(), compress()],
+  integrations: [icon(), robotsTxt(), sitemap(), tailwind(), expressiveCode(astroExpressiveCodeOptions), mdx()/*, compress()*/],
   markdown: {
 	remarkPlugins: [a11yEmoji],
   },
