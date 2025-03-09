@@ -12,6 +12,19 @@ const postsCollection = defineCollection({
 	}),
 });
 
+const papersCollection = defineCollection({
+	loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: "./src/content/papers" }),
+	schema: rssSchema.extend({ 
+		hidden: z.boolean().optional().default(false),
+		description: z.string(),
+		title: z.string(),
+		pubDate: z.date(),
+		pdf: z.string().endsWith(".pdf"),
+	}),
+});
+
+
 export const collections = {
-	'posts': postsCollection
+	'posts': postsCollection,
+	'papers': papersCollection
 }
