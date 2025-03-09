@@ -11,12 +11,11 @@ const request = await octokit.rest.repos.listForAuthenticatedUser({
 	per_page: 100
 }).catch((err) => ({ status: err.status ?? 500, data: null }));
 
-
 if(request.status !== 200 && import.meta.env.DEV) throw new Error(`Failed to fetch github repositories, recieved code ${request.status}`);
 
 const repos = request.data
 
-export async function fetchRemoteProject(project: RemoteProject): Promise<LocalProject | null | undefined> {
+export function fetchRemoteProject(project: RemoteProject): LocalProject | null | undefined {
 	if(repos === null) return undefined;
 
 	const repo = repos.find(repository => repository.full_name === project.repo);

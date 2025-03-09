@@ -2,6 +2,7 @@ import type { Language } from "@utils/languages";
 import DesignLogo from "@assets/design-logo.webp";
 import SentryLogo from "@assets/sentry.png";
 import BadgesIcon from "@assets/badges.svg";
+import GambitIcon from "@assets/gambit.svg";
 
 export type SiteConfig = {
 	author: string;
@@ -58,6 +59,12 @@ export const projects: Project[] = [
 		description: "Community manager at </design> a development community of 600 web developers from June 2020 to February 2023.",
 		language: "Social",
 		icon: DesignLogo
+	},
+	{
+		type: "remote",
+		repo: "PenPow/Gambit",
+		description: "A chess engine built using Rust",
+		icon: GambitIcon
 	},
 	{
 		type: "remote",

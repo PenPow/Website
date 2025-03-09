@@ -13,7 +13,7 @@ let { project } = Astro.props;
 let fetchedProject: LocalProject | undefined;
 
 if(project.type === "remote") {
-	const newProject = await fetchRemoteProject(project);
+	const newProject = fetchRemoteProject(project);
 	if(newProject === null) throw new Error("No Project Found");
 	
 	fetchedProject = newProject;
