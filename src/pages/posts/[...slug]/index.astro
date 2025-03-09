@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import PageLayout from "@layouts/Base.astro";
 import Heading from '@components/Heading.astro';
 import H3 from '@components/markdown/h3.astro';
@@ -15,13 +15,13 @@ export async function getStaticPaths() {
 	const entries = await getCollection('posts');
 	
 	return entries.map(entry => ({
-		params: { slug: entry.slug }, props: { entry },
+		params: { slug: entry.id }, props: { entry },
 	}));
 }
 
 const { entry } = Astro.props;
 
-const { Content, headings } = await entry.render();
+const { Content, headings } = await render(entry);
 ---
 
 <PageLayout meta={{ title: entry.data.title }}>

@@ -9,5 +9,7 @@
 			"@utils/*": ["src/utils/*"],
 			"@site-config": ["src/site.config.ts"]
 		}
-	}
+	},
+	"include": [".astro/types.d.ts", "**/*"],
+	"exclude": ["dist"]
 }
