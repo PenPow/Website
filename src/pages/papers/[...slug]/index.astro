@@ -30,14 +30,14 @@ const { Content, headings } = await render(entry);
 		<Heading title={entry.data.title} />
 		<div class="ml-auto flex items-center gap-2">
 			<p class="mt-1">Published {new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/London", dateStyle: "short" }).format(entry.data.pubDate)} •</p>
-			
+
+			<div class="mt-1">
+				<SocialButton icon="fluent:document-24-filled" alt="View as PDF" link=`/papers/${entry.data.pdf}` />
+			</div>
 			<div class="transition-colors duration-200 text-zinc-800 hover:text-zinc-950 dark:text-white dark:hover:text-neutral-300">
 				<a href=`/papers/${entry.data.pdf}` target="_blank" rel="noopener noreferrer">
 					<p class="mt-1"><b>Download as PDF</b></p>
 				</a>
-			</div>
-			<div class="mt-1">
-				<SocialButton icon="fluent:document-24-filled" alt="View as PDF" link=`/papers/${entry.data.pdf}` />
 			</div>
 		</div>
 
