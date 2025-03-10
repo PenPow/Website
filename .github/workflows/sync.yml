@@ -25,9 +25,9 @@ jobs:
       
       - name: Setup git
         run: |
-          git config commit.gpgsign true
-          git config user.signingkey $GPG_KEY_ID
-          git config gpg.program /tmp/gpg.sh
+          git config --global commit.gpgsign true
+          git config --global user.signingkey $GPG_KEY_ID
+          git config --global gpg.program /tmp/gpg.sh
         env:
           GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
       
