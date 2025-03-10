@@ -11,7 +11,7 @@ jobs:
       - name: Import GPG key
         run: echo $GPG_KEY | base64 --decode | gpg --batch --import
         env:
-            GPG_KEY: ${{ secrets.GPG_KEY }}
+          GPG_KEY: ${{ secrets.GPG_KEY }}
     
       - name: Add the custom gpg siging program that passes the passphrase to the gpg CLI
         run: |
@@ -19,7 +19,10 @@ jobs:
           echo '#!/bin/bash' >> /tmp/gpg.sh
           echo 'gpg --batch --pinentry-mode=loopback --passphrase $GPG_KEY_PASSPHRASE $@' >> /tmp/gpg.sh
           chmod +x /tmp/gpg.sh
-    
+        
+      - name: Checkout Repository
+        uses: actions/checkout@main
+      
       - name: Setup git
         run: |
           git config commit.gpgsign true
@@ -28,11 +31,11 @@ jobs:
         env:
           GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
       
-      - name: Checkout Repository
-        uses: actions/checkout@main
       - name: Run GitHub File Sync
         uses: BetaHuhn/repo-file-sync-action@v1
         with:
           GH_PAT: ${{ secrets.GH_PAT }}
           IS_FINE_GRAINED: true
           ASSIGNEES: PenPow
+        env:
+          GPG_KEY_PASSPHRASE: ${{ secrets.GPG_KEY_PASSPHRASE }}
