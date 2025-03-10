@@ -1,0 +1,29 @@
+PenPow/penpow.github.io:
+  - source: public/
+    dest: public/
+    deleteOrphaned: true
+
+  - source: src/
+    dest: src/
+    deleteOrphaned: true
+
+  - source: .gitignore
+    dest: .gitignore
+
+  - source: .npmrc
+    dest: .npmrc
+
+  - source: astro.config.mts
+    dest: astro.config.mts
+
+  - source: package-lock.json
+    dest: package-lock.json
+  
+  - source: package.json
+    dest: package.json
+  
+  - source: tailwind.config.ts
+    dest: tailwind.config.ts
+  
+  - source: tsconfig.json
+    dest: tsconfig.json
