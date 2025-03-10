@@ -16,4 +16,3 @@ jobs:
           GH_PAT: ${{ secrets.GH_PAT }}
           IS_FINE_GRAINED: true
           ASSIGNEES: PenPow
-          DRY_RUN: true
