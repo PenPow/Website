@@ -120,6 +120,14 @@ const { Content, headings } = await render(entry);
 		@apply bg-zinc-100 dark:bg-zinc-900 py-3 border-b-2 border-b-zinc-300 dark:border-b-zinc-700;
 	}
 
+	#content table thead tr th strong {
+		@apply transition-colors duration-200;
+	}
+
+	#content table tbody tr td strong {
+		@apply transition-colors duration-200;
+	}
+
 	#content table tr {
 		@apply py-4 mt-2 bg-zinc-100 dark:bg-zinc-900;
 	}
